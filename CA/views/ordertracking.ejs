@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Tracking</title>
+</head>
+<body>
+    <h1>Order Tracking</h1>
+    <ul>
+        <% orders.forEach(order => { %>
+            <li>Order ID: <%= order.order_id %> - Status: <%= order.status %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>

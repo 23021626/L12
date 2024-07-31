@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Supermarket</title>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <form action="/search" method="get">
+        <input type="text" name="keyword" placeholder="Search for products...">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        <% products.forEach(product => { %>
+            <li>
+                <h2><%= product.product_name %></h2>
+                <p><%= product.description %></p>
+                <p>Price: $<%= product.price %></p>
+                <p>Stock: <%= product.stock %></p>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
